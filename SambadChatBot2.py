@@ -110,7 +110,7 @@ def create_conversational_agent(user_id):
 
     llm_chain = LLMChain(llm=llm, prompt=prompt)
     agent = ZeroShotAgent(llm_chain=llm_chain, tools=tools, verbose=True)
-    agent_executor = AgentExecutor.from_agent_and_tools(agent=agent, tools=tools, memory=memory, verbose=True, handle_parsing_errors=True)
+    agent_executor = AgentExecutor.from_agent_and_tools(agent=agent, tools=tools, memory=memory, verbose=True)
     return agent_executor
 
 
